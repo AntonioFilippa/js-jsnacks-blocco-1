@@ -21,15 +21,8 @@ for (let i = 0; i < 6; i++) {
 
     // Controllare se il numero è dispari e inserirlo nell'array
 
-    if (isNaN(numeroInserito)) {
-        
-        console.error("Errore: Inserisci un numero valido.");
-       
-        i--;
 
-    }
-
-    else if (numeroInserito % 2 !== 0) {
+   if (numeroInserito % 2 !== 0) {
 
         numeriDispari.push(numeroInserito);
 
@@ -41,16 +34,30 @@ for (let i = 0; i < 6; i++) {
     {
 
         console.log(`Numero ${numeroInserito} pari , ignorato.`);
+}
+   //CONTROLLO SE L'UTENTE INVIA NULL O CHIUDE IL PROMPT
+if (numeroInserito === null) {
+          
+            
+    console.error("Errore: Nessun valore inserito.");
+i--;
+}
 
-    }
-    //controllo se il valore inserito è null
-    else if (numeroInserito === null) {
-        
-        console.error("Errore: Inserisci un numero valido.");
+//CONTROLLO SE UTENTE INSERISCE VALORI NON NUMERICI
 
-    }
+
+if (isNaN(numeroInserito)) {
+   console.error("Errore: Inserisci un numero valido.");
+    i--;
 
 }
+
+}
+
+
+
+//controllo se il valore inserito è null
+    
 // Stampare l'array dei numeri dispari
 
 console.log("Array dei numeri dispari:");
