@@ -18,7 +18,7 @@ if (i > i2) {
     console.log(parola1);
 }
 
-if (i == i2) {
+else if (i == i2) {
     console.log(parola1);
     console.log(parola2);
     console.log("le parole sono uguali");
